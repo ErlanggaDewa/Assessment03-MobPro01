@@ -1,6 +1,8 @@
 package org.d3if1053.hitungzakatpenghasilan.ui.hitung
 
 import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
@@ -8,19 +10,39 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.d3if1053.hitungzakatpenghasilan.db.ZakatDao
 import org.d3if1053.hitungzakatpenghasilan.db.ZakatEntity
+import org.d3if1053.hitungzakatpenghasilan.model.GoldModel
 import org.d3if1053.hitungzakatpenghasilan.model.ZakatModel
+import org.d3if1053.hitungzakatpenghasilan.network.ApiStatus
+import org.d3if1053.hitungzakatpenghasilan.network.GoldApi
 
 class HitungViewModel(val database: ZakatDao) :
     ViewModel() {
     var zakatModel: ZakatModel = ZakatModel()
+    private val goldModel = MutableLiveData<GoldModel>()
+    private val status = MutableLiveData<ApiStatus>()
 
     init {
         Log.i("HitungViewModel", "HitungViewModel created!")
+        retrieveData()
     }
 
     override fun onCleared() {
         super.onCleared()
         Log.i("HitungViewModel", "HitungViewModel destroyed!")
+    }
+
+    private fun retrieveData() {
+        viewModelScope.launch(Dispatchers.IO) {
+            status.postValue(ApiStatus.LOADING)
+            try {
+                val result = GoldApi.service.getPrice()
+                goldModel.postValue(result)
+                status.postValue(ApiStatus.SUCCESS)
+            } catch (e: Exception) {
+                Log.d("HitungViewModel", "Failure: ${e.message}")
+                status.postValue(ApiStatus.FAILED)
+            }
+        }
     }
 
     fun isPayZakat(
@@ -29,7 +51,7 @@ class HitungViewModel(val database: ZakatDao) :
         bonus: String,
         savingStatus: Boolean
     ): Boolean {
-        val nisab = (hargaEmas.toFloat() * 85) / 12;
+        val nisab = (hargaEmas.toFloat() * 85) / 12
         var totalZakat: Long = 0
 
         if (savingStatus) {
@@ -59,4 +81,8 @@ class HitungViewModel(val database: ZakatDao) :
         val regex = "[0-9]+(\\.[0-9]+)?".toRegex()
         return toCheck.matches(regex)
     }
+
+    fun getGoldData(): LiveData<GoldModel> = goldModel
+    fun getStatus(): LiveData<ApiStatus> = status
+
 }

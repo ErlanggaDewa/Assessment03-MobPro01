@@ -39,8 +39,8 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/hargaEmasHint"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="378dp"
+                android:layout_height="64dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
@@ -52,8 +52,12 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/inputHargaEmas"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_harga_emas" />
+                    android:layout_height="58dp"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,12 +67,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hargaEmasHint">
+                app:layout_constraintTop_toBottomOf="@+id/textView">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/inputPenghasilan"
@@ -135,6 +139,19 @@
                 android:text="@string/reset"
                 app:layout_constraintEnd_toEndOf="@+id/penghasilanHint"
                 app:layout_constraintTop_toTopOf="@+id/hitung" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/doppio_one"
+                android:text="@string/description_api_gold_price"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/hargaEmasHint"
+                app:layout_constraintStart_toStartOf="@+id/hargaEmasHint"
+                app:layout_constraintTop_toBottomOf="@+id/hargaEmasHint"
+                tools:fontFamily="sans-serif" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

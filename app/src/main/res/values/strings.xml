@@ -2,7 +2,7 @@
     <string name="app_name">Kalkulator HIZAT</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="intro">Kalkulator zakat penghasilan adalah layanan untuk mempermudah perhitungan jumlah zakat penghasilan yang harus ditunaikan oleh setiap umat muslim sesuai ketetapan syariah. Oleh karena itu, bagi Anda yang ingin mengetahui berapa jumlah zakat yang harus ditunaikan, silahkan gunakan fasilitas Kalkulator Zakat penghasilan dibawah ini.</string>
+    <string name="intro">Kalkulator HIZAT adalah layanan untuk mempermudah perhitungan jumlah zakat penghasilan yang harus ditunaikan oleh setiap umat muslim sesuai ketetapan syariah.</string>
     <string name="hint_harga_emas">Masukan Harga Emas Pergram</string>
     <string name="hint_penghasilan">Masukan Penghasilan Bulanan</string>
     <string name="hitung">Hitung</string>
@@ -16,7 +16,7 @@
     <string name="share">Share</string>
     <string name="share_wajib_text">Saya berkewajiban membayar zakat penghasilan sebesar\nRp %1$d,-\n\nAyo kalian jangan lupa juga bayar zakat!  </string>
     <string name="share_tidak_wajib_text">Saya belum berkewajiban membayar zakat penghasilan\n\nAyo kalian jangan lupa juga bayar zakat!  </string>
-    <string name="penjelasan">\"Hai orang yang beriman, nafkahkanlah sebagian dari hasil usahamu yang baik-baik dan sebagian dari apa yang Kami keluarkan dari bumi untuk kamu.\" \n(QS. Al-Baqarah : 267))\n\nZakat penghasilan atau yang dikenal juga sebagai zakat profesi adalah bagian dari zakat maal yang wajib dikeluarkan atas harta yang berasal dari pendapatan / penghasilan rutin dari pekerjaan yang tidak melanggar syariah.\n\nNishab zakat penghasilan sebesar 85 gram emas per tahun. Kadar zakat penghasilan senilai 2,5%. Dalam praktiknya, zakat penghasilan dapat ditunaikan setiap bulan dengan nilai nishab per bulannya adalah setara dengan nilai seperduabelas dari 85 gram emas, dengan kadar 2,5%. \n\nJadi apabila penghasilan setiap bulan telah melebihi nilai nishab bulanan, maka wajib dikeluarkan zakatnya sebesar 2,5% dari penghasilannya tersebut. (Sumber: Al Qur\'an Surah Al Baqarah ayat 267, Peraturan Menteri Agama Nomer 31 Tahun 2019, Fatwa MUI Nomer 3 Tahun 2003, dan pendapat Shaikh Yusuf Qardawi).</string>
+    <string name="penjelasan">\"Hai orang yang beriman, nafkahkanlah sebagian dari hasil usahamu yang baik-baik dan sebagian dari apa yang Kami keluarkan dari bumi untuk kamu.\" \n(QS. Al-Baqarah : 267))\n\nZakat penghasilan atau yang dikenal juga sebagai zakat profesi adalah bagian dari zakat maal yang wajib dikeluarkan atas harta yang berasal dari pendapatan / penghasilan rutin dari pekerjaan yang tidak melanggar syariah.\n\nNishab zakat penghasilan sebesar 85 gram emas per tahun. Kadar zakat penghasilan senilai 2,5%. Dalam praktiknya, zakat penghasilan dapat ditunaikan setiap bulan dengan nilai nishab per bulannya adalah setara dengan nilai seperduabelas dari 85 gram emas, dengan kadar 2,5%. \n\nJadi apabila penghasilan setiap bulan telah melebihi nilai nishab bulanan, maka wajib dikeluarkan zakatnya sebesar 2,5% dari penghasilannya tersebut. (Sumber: Al Qur\'an Surah Al Baqarah ayat 267, Peraturan Menteri Agama Nomer 31 Tahun 2019, Fatwa MUI Nomer 3 Tahun 2003, dan pendapat Shaikh Yusuf Qardawi).\n\nOleh karena itu, bagi Anda yang ingin mengetahui berapa jumlah zakat yang harus ditunaikan, silahkan gunakan fasilitas Kalkulator Zakat penghasilan ini.</string>
     <string name="penjelasan_title">Penjelasan</string>
     <string name="belum_ada_data">Belum ada data</string>
     <string name="history_title">History</string>
@@ -27,5 +27,6 @@
     <string name="batal">Batal</string>
     <string name="save_title">Mode Penyamaran Nonaktif</string>
     <string name="unsave_title">Mode Penyamaran Aktif</string>
+    <string name="description_api_gold_price">Harga jual emas pergram berdasarkan dari harga-emas.org</string>
 
 </resources>

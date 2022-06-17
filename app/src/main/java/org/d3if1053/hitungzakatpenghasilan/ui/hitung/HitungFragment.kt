@@ -42,6 +42,10 @@ class HitungFragment : Fragment() {
         binding.hitung.setOnClickListener { hitungZakat() }
         binding.reset.setOnClickListener { resetField() }
 
+        viewModel.getGoldData().observe(viewLifecycleOwner) {
+            binding.inputHargaEmas.setText(it.data.current.buy.toString())
+        }
+
         // update UI from any change rotation
         updateUI()
 
