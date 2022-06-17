@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Kalkulator HIZAT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro">Kalkulator zakat penghasilan adalah layanan untuk mempermudah perhitungan jumlah zakat penghasilan yang harus ditunaikan oleh setiap umat muslim sesuai ketetapan syariah. Oleh karena itu, bagi Anda yang ingin mengetahui berapa jumlah zakat yang harus ditunaikan, silahkan gunakan fasilitas Kalkulator Zakat penghasilan dibawah ini.</string>
+    <string name="hint_harga_emas">Masukan Harga Emas Pergram</string>
+    <string name="hint_penghasilan">Masukan Penghasilan Bulanan</string>
+    <string name="hitung">Hitung</string>
+    <string name="reset">Reset</string>
+    <string name="bonus_thr_dan_lainnya">Bonus, THR dan lainnya</string>
+    <string name="wajib_bayar_zakat">Jumlah zakat penghasilan Anda\nRp %1$d,-</string>
+    <string name="tidak_bayar_zakat">Tidak wajib membayar zakat</string>
+    <string name="error">Data yang anda inputkan tidak valid!</string>
+    <string name="about_app">Kalkulator HIZAT merupakan aplikasi android yang berfungsi untuk melakukan perhitungan zakat penghasilan.\n\nAplikasi ini dikembangkan untuk memenuhi mata kuliah Pemograman Untuk Perangkat Bergerak 1 di Telkom University. Temukan kodenya di \nhttps://github.com/ErlanggaDewa/Assessment02-MobPro01\n\nErlangga Dewa Sakti\n6706201053\nD3IF 44~03\n\nCopyright © 2022\nAll rights reserved.</string>
+    <string name="about_app_title">Tentang kami</string>
+    <string name="share">Share</string>
+    <string name="share_wajib_text">Saya berkewajiban membayar zakat penghasilan sebesar\nRp %1$d,-\n\nAyo kalian jangan lupa juga bayar zakat!  </string>
+    <string name="share_tidak_wajib_text">Saya belum berkewajiban membayar zakat penghasilan\n\nAyo kalian jangan lupa juga bayar zakat!  </string>
+    <string name="penjelasan">\"Hai orang yang beriman, nafkahkanlah sebagian dari hasil usahamu yang baik-baik dan sebagian dari apa yang Kami keluarkan dari bumi untuk kamu.\" \n(QS. Al-Baqarah : 267))\n\nZakat penghasilan atau yang dikenal juga sebagai zakat profesi adalah bagian dari zakat maal yang wajib dikeluarkan atas harta yang berasal dari pendapatan / penghasilan rutin dari pekerjaan yang tidak melanggar syariah.\n\nNishab zakat penghasilan sebesar 85 gram emas per tahun. Kadar zakat penghasilan senilai 2,5%. Dalam praktiknya, zakat penghasilan dapat ditunaikan setiap bulan dengan nilai nishab per bulannya adalah setara dengan nilai seperduabelas dari 85 gram emas, dengan kadar 2,5%. \n\nJadi apabila penghasilan setiap bulan telah melebihi nilai nishab bulanan, maka wajib dikeluarkan zakatnya sebesar 2,5% dari penghasilannya tersebut. (Sumber: Al Qur\'an Surah Al Baqarah ayat 267, Peraturan Menteri Agama Nomer 31 Tahun 2019, Fatwa MUI Nomer 3 Tahun 2003, dan pendapat Shaikh Yusuf Qardawi).</string>
+    <string name="penjelasan_title">Penjelasan</string>
+    <string name="belum_ada_data">Belum ada data</string>
+    <string name="history_title">History</string>
+    <string name="harga_emas">Harga Emas</string>
+    <string name="delete_title">Delete data</string>
+    <string name="konfirmasi_hapus">Yakin menghapus data ?</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
+    <string name="save_title">Mode Penyamaran Nonaktif</string>
+    <string name="unsave_title">Mode Penyamaran Aktif</string>
+
+</resources>
