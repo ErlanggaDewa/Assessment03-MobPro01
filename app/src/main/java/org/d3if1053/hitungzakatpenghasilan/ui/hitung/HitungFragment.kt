@@ -16,6 +16,7 @@ import org.d3if1053.hitungzakatpenghasilan.data.SettingDataStore
 import org.d3if1053.hitungzakatpenghasilan.data.dataStore
 import org.d3if1053.hitungzakatpenghasilan.databinding.FragmentHitungBinding
 import org.d3if1053.hitungzakatpenghasilan.db.ZakatDatabase
+import org.d3if1053.hitungzakatpenghasilan.network.ApiStatus
 
 class HitungFragment : Fragment() {
 
@@ -45,6 +46,12 @@ class HitungFragment : Fragment() {
         viewModel.getGoldData().observe(viewLifecycleOwner) {
             binding.inputHargaEmas.setText(it.data.current.buy.toString())
         }
+
+        viewModel.getStatus().observe(viewLifecycleOwner) {
+            updateProgress(it)
+        }
+
+        viewModel.scheduleUpdater(requireActivity().application)
 
         // update UI from any change rotation
         updateUI()
@@ -186,7 +193,6 @@ class HitungFragment : Fragment() {
         binding.hargaEmasHint.error = null
         binding.penghasilanHint.error = null
         binding.bonusHint.error = null
-        binding.inputHargaEmas.text = null
         binding.inputPenghasilan.text = null
         binding.inputBonus.text = null
         binding.outputZakat.text = null
@@ -197,6 +203,24 @@ class HitungFragment : Fragment() {
             menuItem.setTitle(R.string.save_title)
         } else {
             menuItem.setTitle(R.string.unsave_title)
+        }
+    }
+
+    private fun updateProgress(status: ApiStatus) {
+        when (status) {
+            ApiStatus.LOADING -> {
+                binding.progressBar.visibility = View.VISIBLE
+            }
+            ApiStatus.SUCCESS -> {
+                binding.progressBar.visibility = View.GONE
+            }
+            ApiStatus.FAILED -> {
+                binding.hitung.isEnabled = false
+                binding.reset.isEnabled = false
+                binding.outputZakat.setText(R.string.koneksi_error_message)
+                binding.progressBar.visibility = View.GONE
+                binding.networkError.visibility = View.VISIBLE
+            }
         }
     }
 }

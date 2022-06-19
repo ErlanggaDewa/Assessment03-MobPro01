@@ -4,12 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.hitung.HitungFragment">
 
-    <data>
-
-        <variable
-            name="zakat_model"
-            type="org.d3if1053.hitungzakatpenghasilan.model.ZakatModel" />
-    </data>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,17 +30,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/goldPriceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/gold_price_title"
+                app:layout_constraintBottom_toBottomOf="@+id/hargaEmasHint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/hargaEmasHint" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/hargaEmasHint"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="378dp"
+                android:layout_width="0dp"
                 android:layout_height="64dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/goldPriceTitle"
                 app:layout_constraintTop_toBottomOf="@+id/intro">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -61,6 +65,19 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <TextView
+                android:id="@+id/InfoGoldApi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/doppio_one"
+                android:text="@string/description_api_gold_price"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/hargaEmasHint"
+                app:layout_constraintStart_toStartOf="@+id/hargaEmasHint"
+                app:layout_constraintTop_toBottomOf="@+id/hargaEmasHint"
+                tools:fontFamily="sans-serif" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/penghasilanHint"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -72,7 +89,7 @@
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
+                app:layout_constraintTop_toBottomOf="@+id/InfoGoldApi">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/inputPenghasilan"
@@ -141,19 +158,31 @@
                 app:layout_constraintTop_toTopOf="@+id/hitung" />
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="0dp"
+                android:id="@+id/networkError"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/doppio_one"
-                android:text="@string/description_api_gold_price"
-                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:text="@string/koneksi_error"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/hargaEmasHint"
                 app:layout_constraintEnd_toEndOf="@+id/hargaEmasHint"
                 app:layout_constraintStart_toStartOf="@+id/hargaEmasHint"
-                app:layout_constraintTop_toBottomOf="@+id/hargaEmasHint"
-                tools:fontFamily="sans-serif" />
+                app:layout_constraintTop_toTopOf="@+id/hargaEmasHint" />
 
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/hargaEmasHint"
+                app:layout_constraintEnd_toEndOf="@+id/hargaEmasHint"
+                app:layout_constraintStart_toStartOf="@+id/hargaEmasHint"
+                app:layout_constraintTop_toTopOf="@+id/hargaEmasHint" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </ScrollView>
 
 

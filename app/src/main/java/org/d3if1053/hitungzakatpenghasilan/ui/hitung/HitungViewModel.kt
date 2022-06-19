@@ -1,19 +1,26 @@
 package org.d3if1053.hitungzakatpenghasilan.ui.hitung
 
+import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.work.ExistingWorkPolicy
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.d3if1053.hitungzakatpenghasilan.MainActivity
 import org.d3if1053.hitungzakatpenghasilan.db.ZakatDao
 import org.d3if1053.hitungzakatpenghasilan.db.ZakatEntity
 import org.d3if1053.hitungzakatpenghasilan.model.GoldModel
 import org.d3if1053.hitungzakatpenghasilan.model.ZakatModel
 import org.d3if1053.hitungzakatpenghasilan.network.ApiStatus
 import org.d3if1053.hitungzakatpenghasilan.network.GoldApi
+import org.d3if1053.hitungzakatpenghasilan.network.UpdateWorker
+import java.util.concurrent.TimeUnit
 
 class HitungViewModel(val database: ZakatDao) :
     ViewModel() {
@@ -80,6 +87,17 @@ class HitungViewModel(val database: ZakatDao) :
     fun isNumeric(toCheck: String): Boolean {
         val regex = "[0-9]+(\\.[0-9]+)?".toRegex()
         return toCheck.matches(regex)
+    }
+
+    fun scheduleUpdater(app: Application) {
+        val request = OneTimeWorkRequestBuilder<UpdateWorker>()
+            .setInitialDelay(1, TimeUnit.MINUTES)
+            .build()
+        WorkManager.getInstance(app).enqueueUniqueWork(
+            MainActivity.CHANNEL_ID,
+            ExistingWorkPolicy.REPLACE,
+            request
+        )
     }
 
     fun getGoldData(): LiveData<GoldModel> = goldModel

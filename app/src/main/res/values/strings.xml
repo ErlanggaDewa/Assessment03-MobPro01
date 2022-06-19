@@ -1,17 +1,17 @@
 <resources>
-    <string name="app_name">Kalkulator HIZAT</string>
+    <string name="app_name">Kalkulator Hizat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="intro">Kalkulator HIZAT adalah layanan untuk mempermudah perhitungan jumlah zakat penghasilan yang harus ditunaikan oleh setiap umat muslim sesuai ketetapan syariah.</string>
-    <string name="hint_harga_emas">Masukan Harga Emas Pergram</string>
-    <string name="hint_penghasilan">Masukan Penghasilan Bulanan</string>
+    <string name="intro">Kalkulator Hizat adalah layanan untuk mempermudah perhitungan jumlah zakat penghasilan yang harus ditunaikan oleh setiap umat muslim sesuai ketetapan syariah.</string>
+    <string name="hint_harga_emas">Masukan Harga Emas Pergram (Rp)</string>
+    <string name="hint_penghasilan">Masukan Penghasilan Bulanan (Rp)</string>
     <string name="hitung">Hitung</string>
     <string name="reset">Reset</string>
-    <string name="bonus_thr_dan_lainnya">Bonus, THR dan lainnya</string>
+    <string name="bonus_thr_dan_lainnya">Bonus, THR dan lainnya (Rp)</string>
     <string name="wajib_bayar_zakat">Jumlah zakat penghasilan Anda\nRp %1$d,-</string>
     <string name="tidak_bayar_zakat">Tidak wajib membayar zakat</string>
     <string name="error">Data yang anda inputkan tidak valid!</string>
-    <string name="about_app">Kalkulator HIZAT merupakan aplikasi android yang berfungsi untuk melakukan perhitungan zakat penghasilan.\n\nAplikasi ini dikembangkan untuk memenuhi mata kuliah Pemograman Untuk Perangkat Bergerak 1 di Telkom University. Temukan kodenya di \nhttps://github.com/ErlanggaDewa/Assessment02-MobPro01\n\nErlangga Dewa Sakti\n6706201053\nD3IF 44~03\n\nCopyright © 2022\nAll rights reserved.</string>
+    <string name="about_app">Kalkulator Hizat merupakan aplikasi android yang berfungsi untuk melakukan perhitungan zakat penghasilan.\n\nAplikasi ini dikembangkan untuk memenuhi mata kuliah Pemograman Untuk Perangkat Bergerak 1. Temukan kodenya di \nhttps://github.com/ErlanggaDewa/Assessment03-MobPro1\n\nErlangga Dewa Sakti\n6706201053\nD3IF 44~03\n\nCopyright © 2022\nAll rights reserved.</string>
     <string name="about_app_title">Tentang kami</string>
     <string name="share">Share</string>
     <string name="share_wajib_text">Saya berkewajiban membayar zakat penghasilan sebesar\nRp %1$d,-\n\nAyo kalian jangan lupa juga bayar zakat!  </string>
@@ -27,6 +27,13 @@
     <string name="batal">Batal</string>
     <string name="save_title">Mode Penyamaran Nonaktif</string>
     <string name="unsave_title">Mode Penyamaran Aktif</string>
-    <string name="description_api_gold_price">Harga jual emas pergram berdasarkan dari harga-emas.org</string>
+    <string name="description_api_gold_price">Harga jual emas pergram berdasarkan dari data harga-emas.org</string>
+    <string name="gold_price_title">Harga Emas (Rp)</string>
+    <string name="koneksi_error">Koneksi error</string>
+    <string name="koneksi_error_message">Aplikasi membutuhkan jaringan\nHarap cek jaringan anda</string>
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update data hewan otomatis</string>
+    <string name="notif_title">Ayo Zakat!</string>
+    <string name="notif_text">Jangan lupakan kewajiban untuk berzakat ya 😊</string>
 
 </resources>
