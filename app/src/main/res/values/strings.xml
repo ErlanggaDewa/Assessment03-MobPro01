@@ -35,14 +35,14 @@
     <string name="channel_desc">Update data hewan otomatis</string>
     <string name="notif_title">Ayo Zakat!</string>
     <string name="notif_text">Jangan lupakan kewajiban untuk berzakat ya 😊</string>
-    <string name="nama">Name\t\t\t\t\t\t\t:</string>
-    <string name="company">College\t\t\t\t\t:</string>
-    <string name="alamat">Location\t\t\t\t:</string>
+    <string name="nama">Name</string>
+    <string name="company">College</string>
+    <string name="alamat">Location</string>
     <string name="bio">About</string>
     <string name="my_biodata">My Biodata</string>
     <string name="biodata_developer">Biodata Developer</string>
     <string name="user_image">User Image</string>
     <string name="biodata_error">Gagal Mengambil Biodata User</string>
-    <string name="linked_in">LinkedIn\t\t\t\t:</string>
+    <string name="linked_in">LinkedIn</string>
 
 </resources>
