@@ -25,4 +25,9 @@
         android:name="org.d3if1053.hitungzakatpenghasilan.ui.history.HistoryFragment"
         android:label="@string/history_title"
         tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/biodataFragment"
+        android:name="org.d3if1053.hitungzakatpenghasilan.ui.biodata.BiodataFragment"
+        android:label="@string/biodata_developer"
+        tools:layout="@layout/fragment_biodata" />
 </navigation>

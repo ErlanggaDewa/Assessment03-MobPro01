@@ -65,7 +65,7 @@ class HitungViewModel(val database: ZakatDao) :
             viewModelScope.launch {
                 withContext(Dispatchers.IO) {
                     val dataZakat = ZakatEntity(
-                        hargaEmas = hargaEmas.toLong(),
+                        hargaEmas = hargaEmas.toInt().toLong(),
                         gajiBulanan = penghasilan.toLong(),
                         bonusGaji = bonus.toLong(),
                         totalZakat = totalZakat

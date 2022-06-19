@@ -44,7 +44,7 @@ class HitungFragment : Fragment() {
         binding.reset.setOnClickListener { resetField() }
 
         viewModel.getGoldData().observe(viewLifecycleOwner) {
-            binding.inputHargaEmas.setText(it.data.current.buy.toString())
+            binding.inputHargaEmas.setText(it.data.current.buy.toLong().toString())
         }
 
         viewModel.getStatus().observe(viewLifecycleOwner) {
@@ -210,9 +210,13 @@ class HitungFragment : Fragment() {
         when (status) {
             ApiStatus.LOADING -> {
                 binding.progressBar.visibility = View.VISIBLE
+                binding.hitung.isEnabled = false
+                binding.reset.isEnabled = false
             }
             ApiStatus.SUCCESS -> {
                 binding.progressBar.visibility = View.GONE
+                binding.hitung.isEnabled = true
+                binding.reset.isEnabled = true
             }
             ApiStatus.FAILED -> {
                 binding.hitung.isEnabled = false

@@ -9,4 +9,8 @@
         android:id="@+id/historyFragment"
         android:icon="@android:drawable/ic_menu_recent_history"
         android:title="@string/history_title" />
+    <item
+        android:id="@+id/biodataFragment"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="@string/biodata_developer" />
 </menu>
